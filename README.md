@@ -17,3 +17,19 @@ When running your app for the first time Turn off Instant run once to allow for 
 To disable Instant-Run in Android Studio:
 
 (Preferences (Mac) or Settings (PC) -> Build, Execution, Deployment -> Instant Run -> Untick "Enable Instant Run..." )
+
+
+Usual mistakes:
+
+Check that your class child of Application extends from SugarApp or has inside the following lines
+SugarContext.init(this);
+
+Check that your Instant Run is disabled.
+
+3 Check that your DOMAIN_PACKAGE_NAME set is correctly.
+
+Check that after changes (add lines on Application or disabling Instant Run) you remove app from your phone or clear app data.
+
+Check that version of your bd >= 2 (as stated on the website of the author)
+
+Trying Build->Clean Project->Rebuild Project after changes. It's helped for me
